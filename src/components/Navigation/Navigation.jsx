@@ -15,7 +15,7 @@ export default function Navigation() {
       <div>
         <ul className='ul-nav'>
          <li><NavLink to={"/"} className="link-nav">Home</NavLink></li> 
-         <li><NavLink to={"/home"} className="link-nav">About</NavLink></li> 
+         <li><NavLink to={"/about"} className="link-nav">About</NavLink></li> 
         </ul>
       </div>
 
