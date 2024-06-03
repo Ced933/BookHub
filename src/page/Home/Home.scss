@@ -65,11 +65,21 @@
             border: none;
             background-color: transparent;
             span{
+                cursor: pointer;
                 font-size: 30px;
                 font-weight: 800;
                 color: #8D27AE;
             }
         }
     }
+}
+.main{
+    // gallerie responsive 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
 }
    
