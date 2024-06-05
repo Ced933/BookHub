@@ -3,8 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import About from "./page/About/About";
 import BaseLayout from "./BaseLayout";
-import BookDetails from "./page/BookDetails/BookDetails";
-
+import MovieDetails from "./page/MovieDetails/MovieDetails";
 function App() {
   return (
     <>
@@ -12,7 +11,7 @@ function App() {
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/profil/:id" element={<BookDetails />} />
+          <Route path="/profil/:id" element={<MovieDetails />} />
         </Route>
       </Routes>
     </>

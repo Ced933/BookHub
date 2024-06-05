@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import "./Home.scss";
 import axios from 'axios';
 import BookCard from '../../components/BookCard/BookCard';
+import HeaderMovie from '../../components/HeaderMovie/HeaderMovie';
 // import BookDetails from '../BookDetails/BookDetails';
 export default function Home() {
+
+  const [headMovie, setHeadMovie] = useState([])
 
   useEffect(()=>{
     const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
@@ -20,10 +23,31 @@ export default function Home() {
     .catch(err => console.error('error:' + err));
   },[])
   
+  useEffect(()=>{
+    const options = {
+      method: 'GET',
+      url: 'https://api.themoviedb.org/3/movie/940721?language=en-US',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzOThkOTA0OTA3OTdkN2Q3ZDkzM2IxMzY1YzM0ZiIsInN1YiI6IjY2NWNhMmQxNzgxNDExM2JiYzEwODZmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ghsbOei6EUSz74P6-vKNkbVanjjtn2he-YPx-xHyI9k'
+      }
+    };
+    
+    axios
+      .request(options)
+      .then(function (response) {
+        setHeadMovie(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+
+  },[])
 
   // const [search, setSearch] = useState('');
   const [arrayBooks, setArrayBooks ] = useState([]);
 console.log(arrayBooks)
+console.log(headMovie);
 
   // const handleSearch = async (e)=>{
   //   e.preventDefault();
@@ -40,35 +64,16 @@ console.log(arrayBooks)
   // }
 
   return (
-    <div>
-
-      <header className='header'>
-       
-      </header>
-      <div className='content'>
-        
-      </div>
-      <div className='header-search'>
-        <h1>Find Your Book.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem  Perferendis commodi ducimus consectetur ratione tempora iusto optio! Cum, porro cumque!</p>
-        <form className='form' id='form'>
-          <input type="text" className='input-text'   />
-          <button className='btn-search'><span className="material-symbols-outlined">
-search
-</span></button>
-        </form>
-      </div>
+    <div className='home'>
+      {/* Top header movie  */}
+      <HeaderMovie headMovie={headMovie}/>
      <main className='main'>
       {
        arrayBooks && arrayBooks.map((book, index) =>{
          return <BookCard  key={index} data={book} />
         })
       }
-
      </main>
-     <div>
-      {/* <BookDetails arrayBooks={arrayBooks} /> */}
-     </div>
     </div>
   )
 }

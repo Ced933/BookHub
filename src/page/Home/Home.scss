@@ -1,85 +1,14 @@
-.header{
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 80dvh;
-    // border: 1px solid red;
-    background-image: url("../../../public/library-img.jpeg");
-    background-size: cover;
-    background-position: center;
-    // background-color: aqua;
-}
-.content{
-    // position: fixed;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    left: 0;
-    z-index: 300;
-    width: 100%;
-    height: 80dvh;
-    opacity: 0.3;
-    
-    background-color: #8D27AE;
-}
-.header-search{
-    width: 40%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 400;
-    h1{
-        text-align: center;
-        font-size: 55px;
-        margin: 0;
-        margin-bottom: 20px;
-        color: white;
-    }
-    p{
-        text-align: center;
-        margin: 0;
-        color: white;
-        font-weight: 300;
-    }
-    .form{
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px ;
-        border-radius: 50px;
-        background-color: white;
-        .input-text{
-            width: 85%;
-            // border: 1px solid red;
-            // outline: none;
-
-            border: none;
-            &:focus{
-                outline: none;
-            }
-        }
-        .btn-search{
-            border: none;
-            background-color: transparent;
-            span{
-                cursor: pointer;
-                font-size: 30px;
-                font-weight: 800;
-                color: #8D27AE;
-            }
-        }
-    }
-}
-.main{
+.home{
+width: 80%;
+// border: 3px solid blueviolet;
+  .main{
     // gallerie responsive 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 70px auto 0;
+    gap: 20px;
+  }
 }
    
