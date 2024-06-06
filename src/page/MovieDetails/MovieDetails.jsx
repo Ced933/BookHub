@@ -6,7 +6,7 @@ export default function BookDetails() {
 
   const [movieDetails, setMovieDetails] = useState([]);
   const {id} = useParams();
-  // const bookChoose = arrayBooks.filter((book) => { return book.cover_i === id})
+  // const bookChoose = arrayMovies.filter((book) => { return book.cover_i === id})
     console.log(id);
 
     useEffect(() =>{

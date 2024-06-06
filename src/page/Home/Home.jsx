@@ -17,7 +17,7 @@ export default function Home() {
       }
     };
     axios.get(url, options)
-    .then(res => setArrayBooks(res.data.results))
+    .then(res => setArrayMovies(res.data.results))
     .catch(err => console.error('error:' + err));
   },[])
   
@@ -42,8 +42,8 @@ export default function Home() {
 
   },[])
 
-  const [arrayBooks, setArrayBooks ] = useState([]);
-console.log(arrayBooks)
+  const [arrayMovies, setArrayMovies ] = useState([]);
+console.log(arrayMovies)
 console.log(headMovie);
 
   return (
@@ -52,7 +52,7 @@ console.log(headMovie);
       <HeaderMovie headMovie={headMovie}/>
      <main className='main'>
       {
-       arrayBooks && arrayBooks.map((book, index) =>{
+       arrayMovies && arrayMovies.map((book, index) =>{
          return <BookCard  key={index} data={book} />
         })
       }
