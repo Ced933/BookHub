@@ -7,8 +7,6 @@ export default function BookCard({data}) {
   const [green, setGreen] = useState(false)
   const [orange, setOrange] = useState(false)
   const [red, setRed] = useState(false)
-  
-  
 
 useEffect(()=>{
   function colorRate (){
@@ -30,10 +28,6 @@ useEffect(()=>{
   function numberaftercoma (number ){
     return number.toFixed(1)
   }
-
- 
-
-  
 
   return (
     <NavLink to={`/profil/${data.id}`} className="link-book">

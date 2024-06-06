@@ -1,5 +1,5 @@
 import Home from "./page/Home/Home";
-import "./App.css";
+import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import NowPlay from "./page/Nowplay/NowPlay";
 import BaseLayout from "./BaseLayout";

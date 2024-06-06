@@ -60,4 +60,3 @@ console.log(headMovie);
     </div>
   )
 }
-// 328398d90490797d7d7d933b1365c34f key api movie 

@@ -1,13 +1,10 @@
+@import '../../App.scss';
+
 .now-playing{
-    width: 85%;
-    // border: 3px solid blueviolet;
+  @include mainContentWidth;
+
       .main-now-playing{
         // gallerie responsive 
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 70px auto 0;
-        gap: 20px;
+       @include galleryResponsive;
       }
     }

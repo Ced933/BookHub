@@ -6,21 +6,17 @@
   
 }
 .content{
-    // position: fixed;
     position: absolute;
     top: 0;
     right: 0;
-    // left: 0;
     z-index: 300;
     width: 85%;
     height: 70dvh;
     opacity: 0.4;
-    
     background-color: #000;
 }
 .header-search{
     width: 40%;
-    // border: 1px solid blue;
     position: absolute;
     left: 50%;
     top: 35%;
@@ -47,34 +43,4 @@
         padding: 5px 30px;
         background-color: orange;
     }
-    // .form{
-    //     width: 70%;
-    //     margin: 0 auto;
-    //     margin-top: 20px;
-    //     display: flex;
-    //     justify-content: space-around;
-    //     padding: 10px ;
-    //     border-radius: 50px;
-    //     background-color: white;
-    //     .input-text{
-    //         width: 85%;
-    //         // border: 1px solid red;
-    //         // outline: none;
-
-    //         border: none;
-    //         &:focus{
-    //             outline: none;
-    //         }
-    //     }
-    //     .btn-search{
-    //         border: none;
-    //         background-color: transparent;
-    //         span{
-    //             cursor: pointer;
-    //             font-size: 30px;
-    //             font-weight: 800;
-    //             color: #8D27AE;
-    //         }
-    //     }
-    // }
 }
