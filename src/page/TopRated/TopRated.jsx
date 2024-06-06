@@ -8,13 +8,13 @@ export default function TopRated() {
   
     const [headMovie, setHeadMovie] = useState([])
     const [arrayMovie, setArrayMovie ] = useState([]);
-  
+    console.log(arrayMovie)
   
   
     useEffect(()=>{
       const options = {
         method: 'GET',
-        url: 'https://api.themoviedb.org/3/movie/940721?language=en-US',
+        url: 'https://api.themoviedb.org/3/movie/238?language=en-US',
         headers: {
           accept: 'application/json',
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjgzOThkOTA0OTA3OTdkN2Q3ZDkzM2IxMzY1YzM0ZiIsInN1YiI6IjY2NWNhMmQxNzgxNDExM2JiYzEwODZmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ghsbOei6EUSz74P6-vKNkbVanjjtn2he-YPx-xHyI9k'
