@@ -3,7 +3,6 @@ import "./Home.scss";
 import axios from 'axios';
 import BookCard from '../../components/BookCard/BookCard';
 import HeaderMovie from '../../components/HeaderMovie/HeaderMovie';
-// import BookDetails from '../BookDetails/BookDetails';
 export default function Home() {
 
   const [headMovie, setHeadMovie] = useState([])
@@ -19,7 +18,6 @@ export default function Home() {
     };
     axios.get(url, options)
     .then(res => setArrayBooks(res.data.results))
-    // .then(json => console.log(json))
     .catch(err => console.error('error:' + err));
   },[])
   
@@ -44,24 +42,9 @@ export default function Home() {
 
   },[])
 
-  // const [search, setSearch] = useState('');
   const [arrayBooks, setArrayBooks ] = useState([]);
 console.log(arrayBooks)
 console.log(headMovie);
-
-  // const handleSearch = async (e)=>{
-  //   e.preventDefault();
-  //   if(search.length > 2){
-      
-  //     await axios.get(`https://openlibrary.org/search.json?q=${search}`).then((res) => setArrayBooks(res.data.docs))
-  //      console.log(arrayBooks)
-  //        setSearch('');
-  //        document.getElementById('form').reset();
-  //   }else{
-  //     return false
-  //   }
-
-  // }
 
   return (
     <div className='home'>

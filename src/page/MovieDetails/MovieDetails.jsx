@@ -40,6 +40,9 @@ export default function BookDetails() {
   return (
     <div className='movie-container'>
       <div className='gradient-bg'>
+
+      <img className='movie-details-box' src={ `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movieDetails.backdrop_path}`}  alt='' />
+
       <div className='first-part'>
         <div>
           <img className='cover-book'  src={ `https://image.tmdb.org/t/p/w440_and_h660_face${movieDetails.poster_path}`} alt={`${movieDetails.title}`} /> 
@@ -66,15 +69,12 @@ export default function BookDetails() {
             
               
         </div>
-
+       
       </div>
-      <div className='movie-details-box' style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movieDetails.backdrop_path})`, backgroundSize: 'contain', backgroundPosition: '100% 100%', backgroundRepeat:'no-repeat'}}>
+      
+     
     
       
-      </div>
-      {/* <div className='content-movie'>
-
-      </div> */}
   </div>
   )
 }

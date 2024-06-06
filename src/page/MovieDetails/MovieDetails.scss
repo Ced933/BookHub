@@ -1,14 +1,18 @@
 .movie-container{
+    height: 100dvb;
+    width: 85%;
+    // l'image wallpaper prend tout l'ecran 
+    display: flex;
 
     .gradient-bg{
-        position: absolute;
+        position: relative;
         width: 100%;
-     
-        height: 55dvh;
-        z-index: 2;
-        // padding: 20px;
+        
+        right: 0;
+        height: auto;
         background: rgb(0,0,0);
         background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);
+
         .first-part{
             z-index: 6;
             display: flex;
@@ -63,24 +67,20 @@
     }
 
     .movie-details-box{
-        z-index: 1;
-        position: relative;
-        // border: 1px solid red;
+     
+        position: absolute;
+        top: 0;
+       
+        z-index: -10;
+        
         width: 100%;
-        // padding: 20px;
-        height: 55dvh;
+      
+        height: 100%;
+        object-fit: cover;
+
        
     }
 
-    .content-movie{
-        // z-index: 5;
-        // position: absolute;
-        // bottom: 0;
-        // width: 100%;
-        // // height: 55dvh;
-        // border: 1px solid blue;
-        // padding: 20px;
-  
-    }
+
     
 }

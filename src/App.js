@@ -1,7 +1,7 @@
 import Home from "./page/Home/Home";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import About from "./page/About/About";
+import NowPlay from "./page/Nowplay/NowPlay";
 import BaseLayout from "./BaseLayout";
 import MovieDetails from "./page/MovieDetails/MovieDetails";
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/nowplaying" element={<NowPlay />} />
           <Route path="/profil/:id" element={<MovieDetails />} />
         </Route>
       </Routes>

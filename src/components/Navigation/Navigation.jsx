@@ -14,7 +14,7 @@ export default function Navigation() {
         <div>
         <h3 className='movie-title-nav'>CATEGORIES</h3>
           <ul className='ul-nav'>
-          <li><NavLink to={"/"} className="link-nav">Now playing <span className="material-symbols-outlined">
+          <li><NavLink to={"/nowplaying"} className="link-nav">Now playing <span className="material-symbols-outlined">
 live_tv
 </span></NavLink></li> 
           <li><NavLink to={"/about"} className="link-nav">Popular <span className="material-symbols-outlined">
