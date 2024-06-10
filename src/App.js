@@ -1,7 +1,7 @@
 import Home from "./page/Home/Home";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import NowPlay from "./page/Nowplay/NowPlay";
+import NowPlay from "./page/Nowplay/NowPlay.tsx";
 import BaseLayout from "./BaseLayout";
 import MovieDetails from "./page/MovieDetails/MovieDetails";
 import Popular from "./page/Popular/Popular";

@@ -16,8 +16,19 @@ html{
   width: 100%;
   margin: 70px auto 0;
   gap: 20px;
+  @media screen and (max-width: 450px){
+    width: 80%;
+   
+  }
 }
 
 @mixin mainContentWidth{
   width: 85%;
+  @media screen and (max-width: 1150px){
+    width: 92%;
+    @media screen and (max-width: 450px){
+      width: 79%;
+     
+    }
+  }
 }

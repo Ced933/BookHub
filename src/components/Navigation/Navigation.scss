@@ -5,7 +5,13 @@
     height: 100dvh;
     display: flex;
     align-items: center;
-
+    @media screen and (max-width: 1150px){
+        width: 8%;
+    }
+    @media screen and (max-width: 450px){
+        width: 20%;
+    }
+    
     .nav-box{
         width: 100%;
         height: 60%;
@@ -17,12 +23,16 @@
                 color: #fff;
                 text-align: center;
                 text-decoration: none;
+                width: 100%;
             }
         }
+        
         .movie-title-nav{
+            // border: 1px solid orange;
             text-align: center;
             color: #fff;
         }
+
         .ul-nav{
             padding: 0;
             margin: 0;

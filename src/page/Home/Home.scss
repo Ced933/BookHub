@@ -1,6 +1,8 @@
 @import '../../App.scss';
 .home{
   @include mainContentWidth;
+
+
   .main{
     // gallerie responsive 
     @include galleryResponsive;

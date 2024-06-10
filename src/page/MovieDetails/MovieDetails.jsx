@@ -6,7 +6,25 @@ export default function BookDetails() {
 
   const [movieDetails, setMovieDetails] = useState([]);
   const {id} = useParams();
-    console.log(id);
+
+  const[ width, setWidth] = useState(window.innerWidth);
+  
+
+  useEffect(()=>{
+
+    
+    // la fonction qu'on va lancer a chaque changement 
+const handleResize = ()=>{
+  setWidth(window.innerWidth);
+}
+// quand le composant est monté 
+window.addEventListener('resize', handleResize);
+// quand le composant est détruit 
+return ()=>{
+  window.removeEventListener('resize', handleResize);
+};
+
+  },[])
 
     useEffect(() =>{
 
@@ -33,9 +51,11 @@ export default function BookDetails() {
   return (
     <div className='movie-container'>
       <div className='gradient-bg'>
+        {
+          width > 1150 && <img className='movie-details-box' src={ `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movieDetails.backdrop_path}`}  alt={movieDetails.title} />
 
-      <img className='movie-details-box' src={ `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movieDetails.backdrop_path}`}  alt={movieDetails.title} />
-
+        }
+      
       <div className='first-part'>
         <div>
           <img className='cover-book'  src={ `https://image.tmdb.org/t/p/w440_and_h660_face${movieDetails.poster_path}`} alt={`${movieDetails.title}`} /> 
@@ -43,13 +63,16 @@ export default function BookDetails() {
         <div>
           <h3 className='title-movie'>{movieDetails.title} </h3>
           <p className='title-publish'>{movieDetails.release_date}</p>
-          <ul>
-                {
-              arrayGenre &&   arrayGenre.map((genre,index) =>{
-                    return <li key={index} className='span-genre'>{genre.name}</li>
-                  })
-                }
-             </ul>
+          {
+            width > 768 ?  <ul>
+            {
+          arrayGenre &&   arrayGenre.map((genre,index) =>{
+                return <li key={index} className='span-genre'>{genre.name}</li>
+              })
+            }
+         </ul> : null
+          }
+         
         </div>
         </div>
         <div className='seconde-part'>

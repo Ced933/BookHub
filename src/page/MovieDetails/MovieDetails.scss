@@ -1,6 +1,8 @@
+@import '../../App.scss';
+
 .movie-container{
     height: 100dvb;
-    width: 85%;
+    @include mainContentWidth;
     // l'image wallpaper prend tout l'ecran 
     display: flex;
 
@@ -11,12 +13,18 @@
         height: auto;
         background: rgb(0,0,0);
         background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);
+        @media screen and (max-width: 1150px){
+            background: rgb(0,0,0);
+        }
 
         .first-part{
             z-index: 6;
             display: flex;
             gap: 30px;
-
+            @media screen and (max-width: 450px){
+               flex-direction: column;
+            }
+            
             .cover-book{
                 width: 150px;
                 height: 220px;
@@ -28,11 +36,22 @@
                 margin: 0;
                 color: #fff;
                 text-transform: uppercase;
+                @media screen and (max-width: 1150px){
+                    font-size: 25px;
+                    width: 60%;
+                }
+                @media screen and (max-width: 450px){
+                   width: 80%;
+                   font-size: 20px;
+                 }
                 
             }
             .title-publish{
                 color: #fff;
                 font-weight: 200;
+                @media screen and (max-width: 450px){
+                    margin: 0;
+                 }
               
             }
             
@@ -55,6 +74,9 @@
                 color: #fff;
                 font-weight: 200;
                 width: 40%;
+                @media screen and (max-width: 1150px){
+                    width: 80%;
+                }
             }
             a{
                 color: #fff;
